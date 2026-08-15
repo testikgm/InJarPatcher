@@ -1,0 +1,19 @@
+{
+  "rules": [
+    {
+      "targetClass": "com.example.sample.Greeter",
+      "targetMethod": "sayHello",
+      "mode": "REPLACE_BODY",
+      "code": "{\n  System.out.println(\"[INJECTED] Method body replaced via InJarPatcher!\");\n}",
+      "extraImports": [
+        "java.util"
+      ]
+    },
+    {
+      "targetClass": "com.example.sample.Greeter",
+      "targetMethod": "calculate",
+      "mode": "INSERT_BEFORE",
+      "code": "{\n  System.out.println(\"[HOOK] calculate() was called with args: \" + $1 + \", \" + $2);\n}"
+    }
+  ]
+}

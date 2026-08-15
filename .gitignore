@@ -1,0 +1,21 @@
+# Maven build output
+target/
+*.jar
+*.war
+*.ear
+*.class
+
+# Maven shade plugin generated file
+dependency-reduced-pom.xml
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Logs & temp
+*.log
+test-sample/
